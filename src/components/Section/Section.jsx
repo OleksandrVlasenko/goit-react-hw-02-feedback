@@ -1,10 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const Section = ({ title, onRender }) => {
+
+export const Section = ({ title, children }) => {
   return (
     <section>
       <h2>{title}</h2>
-      {onRender}
+      {children}
     </section>
   );
 };
+
+Section.propTypes = {
+  tilte: PropTypes.string,
+  children: PropTypes.element.isRequired,
+}
